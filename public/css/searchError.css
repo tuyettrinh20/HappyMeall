@@ -1,0 +1,41 @@
+body{
+    align-items: center;
+    justify-content: center;
+}
+h2 {
+    margin-top: 40px;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Source Serif 4", serif;
+    font-weight: 800;
+}
+footer{
+    margin-top: auto;
+}
+
+.img {
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.img img{
+    padding-left: 450px;
+}
+.error {
+    margin-top: 30px;
+    margin-bottom: 90px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.error a{
+    text-decoration: none;
+    background-color: #97cc3b;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+.error p{
+    font-weight: 600;
+}

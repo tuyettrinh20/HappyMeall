@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') %>
+    <title>HappyMeal</title>
+    <link rel="stylesheet" type="text/css" href="/css/search.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2> Search Results</h2>
+    <div id="descript"></div>
+    <div class="search-result" id="search-result">
+        <% for(let i =0; i < food.length; i++){ %>
+        <div class="result">
+            <a href="/recipe/<%= food[i].id %>"><img src="<%= food[i].img %>" ></a>
+            <h3><a href="/recipe/<%= food[i].id %>"><%= food[i].name_food %></a></h4>
+            <p class="re-p"><%= food[i].name %></p>
+        </div>
+        <% } %>
+    </div>
+
+    <div class="pagination" id="pagination"> 
+        <a href="#" id="prev"><i class="fa-solid fa-caret-left"></i></a> 
+        <div class="page-num" id="page-num"></div>
+        <a href="#" id="next"><i class="fa-solid fa-caret-right"></i></a> 
+    </div> 
+</body>
+<footer><%- include('partials/footer') %></footer>
+<script>
+    const cardsPerPage = 8; // Number of cards to show per page 
+  const data = document.getElementById('search-result'); 
+  const pagination = document.getElementById('pagination'); 
+  const prevButton = document.getElementById('prev'); 
+  const nextButton = document.getElementById('next'); 
+  const pageNum = document.getElementById('page-num');  
+  let description = document.getElementById('descript'); 
+    
+  const cards =  
+      Array.from(data.getElementsByClassName('result')); 
+    
+  // Calculate the total number of pages 
+  const totalPages = Math.ceil(cards.length / cardsPerPage); 
+  let currentPage = 1;
+  for(let i =1; i <= totalPages; i++){
+    var listItem = document.createElement('a');
+        listItem.setAttribute('href',"#");
+        listItem.setAttribute('data-page',i);
+        listItem.classList.add('page-link');
+        listItem.textContent = `${i}`;
+        pageNum.appendChild(listItem);
+  }
+  let pageLinks = document.querySelectorAll('.page-link');
+  if(cards.length > 0){
+    var list = document.createElement('p');
+    list.classList.add('re-num');
+    list.textContent = `Found ${cards.length} results`;
+    description.appendChild(list);
+  }
+  // Function to display cards for a specific page 
+  function displayPage(page) { 
+      const startIndex = (page - 1) * cardsPerPage; 
+      const endIndex = startIndex + cardsPerPage; 
+      cards.forEach((card, index) => { 
+          if (index >= startIndex && index < endIndex) { 
+              card.style.display = 'block'; 
+          } else { 
+              card.style.display = 'none'; 
+          } 
+      }); 
+  } 
+    
+  // Function to update pagination buttons and page numbers 
+  function updatePagination() { 
+      prevButton.disabled = currentPage === 1; 
+      nextButton.disabled = currentPage === totalPages; 
+      pageLinks.forEach((link) => { 
+          const page = parseInt(link.getAttribute('data-page')); 
+          link.classList.toggle('active', page === currentPage); 
+      }); 
+  } 
+    
+  // Event listener for "Previous" button 
+  prevButton.addEventListener('click', () => { 
+      if (currentPage > 1) { 
+          currentPage--; 
+          displayPage(currentPage); 
+          updatePagination(); 
+      } 
+  }); 
+    
+  // Event listener for "Next" button 
+  nextButton.addEventListener('click', () => { 
+      if (currentPage < totalPages) { 
+          currentPage++; 
+          displayPage(currentPage); 
+          updatePagination(); 
+      } 
+  }); 
+    
+  // Event listener for page number buttons 
+  pageLinks.forEach((link) => { 
+      link.addEventListener('click', (e) => { 
+          e.preventDefault(); 
+          const page = parseInt(link.getAttribute('data-page')); 
+          if (page !== currentPage) { 
+              currentPage = page; 
+              displayPage(currentPage); 
+              updatePagination(); 
+          } 
+      }); 
+  }); 
+    
+  // Initial page load 
+  displayPage(currentPage); 
+  updatePagination();  
+
+</script>
+</html>

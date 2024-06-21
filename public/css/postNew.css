@@ -1,0 +1,192 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Maven Pro';
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+
+}
+body{
+    background: #F8F6F6;
+
+}
+.nav-col{
+    position: absolute;
+    background-color: white;
+    width: 300px;
+    height: 100%;
+}
+.header__logo{
+    padding-left: 10px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+.header__logo img{
+    width: 60px;
+    height: 60px;
+}
+.header__logo .header__heading{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #343434;
+}
+.author{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 60px;
+    padding: 10px 8px;
+    display: flex;
+    background-color: #F8F6F6;
+    border-radius: 9px;
+    color: #343434;
+}
+.author .au-icon{
+    margin-left: 15px;
+    font-size: 30px;
+}
+.author .role{
+    margin-left: 15px;
+    font-size: 10px;
+}
+.author .role h3{
+    font-size: 18px;
+}
+
+.nav{
+    font-weight: 600;
+}
+.nav .nav-item{
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+.nav i {
+    color: #97CC3B;
+}
+.nav a{
+    color: #343434;
+    margin-left: 10px;
+}
+.nav .nav-item-active{
+    margin-bottom: 25px;
+    padding-left: 30px;
+    background: #EFFFD4;
+    padding: 15px 30px;
+}
+.header{
+    background-color: #EEEEEE;
+    align-items: right;
+    height: 50px;
+    grid-area: header;
+}
+.header ul{
+    padding-top: 15px;
+    padding-left: 85%;
+    display: flex;
+}
+.header ul li{
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: 400;
+}
+.header ul li .header__logout{
+    color: #343434;
+    background-color: #97CC3B;
+    padding: 6px 6px;
+}
+
+.post-new{
+    margin-left: 27%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 7px;
+    width: 920px;
+    height: 620px;
+}
+.post-new h3{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 1.5rem;
+}
+.post-new .form-post{
+    margin-left: 70px;
+    margin-top: 30px;
+    
+    
+}
+.form-post form{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 23px;
+}
+
+.form-post .name_food{
+    margin-top: 5px;
+    height: 35px;
+    width: 280px;
+    border: solid 1px #D9D9D9;
+}
+.form-post .choose-img #myFile::file-selector-button{
+    margin-top: 5px;
+    background-color: #97CC3B;
+    color: #343434;
+    border: 0px;
+    border-radius: 10px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+.form-post #category{
+    margin-top: 5px;
+    background-color: white;
+    height: 35px;
+    width: 280px;
+    border: solid 1px #D9D9D9;
+}
+.form-post .line-fill{
+    margin-left: 5px;
+    width: 200px;
+    border: none;
+    border-bottom: solid 1px #D9D9D9;
+}
+.form-post form .video{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.form-post form .video input{
+    margin-left: 5px;
+    width: 73%;
+    border: none;
+    border-bottom: solid 1px #D9D9D9;
+}
+.form-post form .instruction{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.form-post form .instruction textarea{
+    margin-top: 5px;
+    height: 150px;
+    width: 84%;
+    border: solid 1px #D9D9D9;
+    resize: none;
+}
+.form-post form button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 140px;
+    margin-left: 330px;
+    background-color: #97CC3B;
+    color: white;
+    font-weight: 500;
+    padding: 8px 7px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.form-post .invisible {
+    display: none;
+    visibility: hidden;
+}
+
+

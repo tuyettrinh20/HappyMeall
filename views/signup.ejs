@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') %>
+    <title>Sign up | HappyMeal</title>
+    <link rel="stylesheet" type="text/css" href="/css/signup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="container">
+        <h2>Create new account</h2>
+        <form action="/signup" method="POST" class="form">
+            <div class="input-box">
+                <input type="text" name= "name" placeholder="Username" 
+                value="<%= typeof name != 'undefined' ? name : '' %>" /> 
+                <div class="err"><%= typeof nameError !== 'undefined' ? nameError : '' %></div>               
+            </div>
+            <div class="input-box">
+                <input type="email" name= "email" placeholder="Email"
+                value="<%= typeof email != 'undefined' ? email : '' %>" />     
+                <div class="err"><%= typeof mailError !== 'undefined' ? mailError : '' %></div>          
+            </div>
+            
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password"
+                value="<%= typeof password != 'undefined' ? password : '' %>" />     
+                <div class="err"><%= typeof passError !== 'undefined' ? passError : '' %></div>           
+            </div>
+            
+            <div class="input-box">
+                <input type="password" name="password2" placeholder="Confirm password"
+                value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />   
+                <div class="err"><%= typeof pass2Error !== 'undefined' ? pass2Error : '' %></div>         
+            </div>
+            
+    
+            <button type="submit" class="register-btn">Sign up</button>
+            <div class="login">
+                <p>Already have an account? <a href="/login" id="login-link"> Log in</a></p>
+             </div>
+        </form>
+        
+     </div>
+     
+     
+</body>
+<footer><%- include('partials/footer') %></footer>
+</html>

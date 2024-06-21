@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Administration | Happy Meal</title>
+    <link rel="stylesheet" type="text/css" href="./css/postNew.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b3d6d01fa4.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="nav-col">
+        <div class="header__logo">
+                <img src="../imgs/logo192.png" alt="Logo" class="header__logo-img">        
+                <span class="header__heading"> Happy Meal</span>
+        </div>
+        <div class="author">
+            <div class="au-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="role">
+                <h3>Happy Meal</h3>
+                <p>Admin</p>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item-active">
+                    <i class="fa-solid fa-upload"></i>
+                    <a href="/post" class="nav-link">Post new post</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-trash"></i>
+                    <a href="/post" class="nav-link">Delete post</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-pen"></i>
+                    <a href="/post" class="nav-link">Update post</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="/post" class="nav-link">Message</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header">
+        <ul>
+            <li>Admin</li>
+            <li><a href="/logout" class="header__logout">Logout</a></li>
+        </ul>
+    </div>
+    <div class="post-new">
+        <h3>New Post</h3>
+        <p style="text-align: center;">Using the below form to create new recipe</p>
+        <div class="form-post">
+            <form action="/post" method="post" enctype='multipart/form-data'>
+                <div id='status' class='invisible'><%= typeof error !== 'undefined' ? error : '' %></div>
+                <div class="title-food">
+                    <label for="title">Title of food<span style="color: red;">* (not exceed 50 characters)</span>:</label><br>
+                    <input class="name_food" type="text" name="name_food" />
+                </div>
+                <div class="choose-img">
+                    <label>Image<span style="color: red;">*</span>:</label><br>
+                    <input type="file" id="myFile" name="filename">
+                </div>
+                <div class="category">
+                    <label>Category<span style="color: red;">*</span>:</label><br>
+                    <select name="category" id="category">
+                        <% for (let i = 0; i<category.length ; i++) { %>
+                            <option value="<%= category[i].name %>"><%= category[i].name %></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="area">
+                    <label>Area<span style="color: red;">*</span>:</label><br>
+                    <input class="name_food" type="text" name="area" />
+                </div>
+                <div class="calories">
+                    <label>Calories: </label>
+                    <input class="line-fill" type="text" name="calories" placeholder="ex: 200 kcal" />
+                </div>
+                <div class="property">
+                    <label>Property: </label>
+                    <input class="line-fill" type="text" name="property" />
+                </div>
+                <div class="video">
+                    <label>Link video: </label>
+                    <input type="text" name="video" />
+                </div>
+                <div class="instruction">
+                    <label>Instruction<span style="color: red;">*</span>:</label><br>
+                    <textarea name="instruction"></textarea>
+                </div>
+                <button>Next</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+<script>
+    let error = document.getElementById('status').textContent;
+    if(error !='')
+      {
+        alert(error);
+      }
+</script>
+</html>

@@ -1,0 +1,105 @@
+h2{
+    margin-top: 70px;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: "Source Serif 4", serif;
+    color: #343434;
+}
+
+p{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Source Serif 4", serif;
+    color: #343434;
+}
+
+.container{
+    margin-left: 70px ;
+    margin-top: 50px;
+    margin-bottom: 50px ;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 30px;
+    align-items: center;
+}
+
+.data-container{
+    width: 239px;
+    height: 348px;
+    border: solid 1px rgb(196, 196, 196);
+    border-radius: 8px;
+    margin-right: 70px;
+} 
+.data-container img {
+    width: 217px;
+    height: 217px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.data-container h4 {
+    text-decoration: none;
+    padding-top: 20px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: "Source Serif 4", serif;
+    color: #343434;
+    cursor: pointer;
+}
+.data-container h4 a{
+    text-decoration: none;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: "Source Serif 4", serif;
+    color: #343434;
+    cursor: pointer;
+}
+.data-container h4 a:hover{
+    color: darkorange;
+}
+.data-container i{
+    font-size: 12px;
+    background-color: #c4c4c4;
+    color: #343434;
+    padding: 10px 10px;
+}
+.pagination{
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.pagination a{
+    text-decoration: none;
+    color: #343434;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 8px 16px; 
+    margin-right: 10px;
+}
+.pagination .page-num i {
+    font-size: 2rem;
+}
+.pagination a:hover { 
+    color: #97cc3b; 
+} 
+  
+.pagination .active { 
+    background-color: #97cc3b; 
+    color: white; 
+    border-radius: 50%;
+
+} 
+.myBtn {
+    background: none;
+    padding: 0px;
+    border: none;
+    float: right;
+    margin-right: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+}

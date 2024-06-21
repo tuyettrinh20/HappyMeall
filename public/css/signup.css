@@ -1,0 +1,77 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+}
+.container{
+    margin-left: 500px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+    box-shadow: 5px 5px 18px -10px #888888;
+    padding: 60px 40px;
+    background-color: #fcfcfc;
+    width: 400px;
+    height: 540px;
+}
+
+.container h2{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #343434;
+    font-size: 2.5rem;
+}
+
+.input-box{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    align-items: center;
+}
+.input-box input{
+    width: 328px;
+    height: 45px;
+    font-size: 1.3rem;
+    padding-left: 10px;
+    border: solid 1px rgb(194, 193, 193);
+    outline: none;
+}
+.err{
+    margin-top: 5px;
+    color: black;
+    background-color: rgb(250, 97, 97);
+    font-size: 1.2rem;
+}
+.register-btn{
+    margin: 40px auto 20px;
+    width:  100%;
+    display: block;
+    padding: 10px 0;
+    outline: none;
+    background-color: rgb(148, 199, 71);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 400 ;
+    cursor: pointer;
+    
+}
+.register-btn:hover{
+    background-color: #86d900;
+    color: white;
+}
+.login{
+    text-align: center;
+}
+.login p {
+    font-size: 1.5rem;
+}
+.login a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #343434;
+    font-weight: 500;
+}

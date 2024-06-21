@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>All categories | Happy Meal</title>
+    <link rel="stylesheet" type="text/css" href="/css/category.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <% if(isLogined === true ){ %>
+        <%- include('headerAfter') %>
+    <% } else{ %>  
+      <%- include('partials/header') %>
+    <% } %>
+    <div id="data-container"></div>
+    
+    <div class="chat"><%- include('chatBox') %></div>
+    <footer><%- include('partials/footer') %></footer>
+
+
+    <script src="js/category.js"></script>
+</body>
+</html>

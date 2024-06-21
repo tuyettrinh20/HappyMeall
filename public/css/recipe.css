@@ -1,0 +1,256 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+}
+
+.container {
+    padding: 70px 30px 30px 70px;
+    display: flex;
+}
+.img-container {
+    width: 600px;
+    height: 600px;
+}
+.img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.watch a{
+    font-size: 1.5rem;
+    list-style: none;
+    text-decoration: none;
+    color: #343434;
+    font-weight: 500;
+}
+.watch a:hover{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.watch:hover{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 145, 19);;
+}
+
+.watch{
+    margin-top: 150px;
+    width: 156px;
+    height: 49px;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 8px;  
+    border: solid 1px #343434;
+    border-left: none;
+    border-bottom: none;
+}
+.name {
+    width: 559px;
+    height: 300px;
+    border: solid 1px #343434;
+    border-left: none;
+    padding-left: 40px;
+}
+
+.name h1{
+    font-size: 4rem;
+    font-family: "Source Serif 4", serif;
+    font-weight: 800;
+    padding-top: 40px;
+    width: 470px;
+    border-bottom: solid 1px #343434;
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+}
+.name .character {
+    display: flex;
+}
+
+.name .property{
+    font-size: 1.5rem;
+    background-color: #FE5F61;
+    color: white;
+    width: fit-content;
+    height: max-content;
+    padding: 3px 6px 3px 6px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    margin-right: 5px;
+}
+.name .calo{
+    font-size: 1.5rem;
+    background-color: #ebd300;
+    color: white;
+    width: fit-content;
+    height: max-content;
+    padding: 3px 6px 3px 6px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+.name .characters p{
+    margin-top: 20px;
+    font-size: 1.7rem;
+    color: #343434;
+    display: inline;
+    padding-right: 8px;
+    font-weight: 500;
+}
+.instruction{
+    height: max-content;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 30px;
+    
+}
+
+.title-in h3{
+    font-size: 3rem;
+    font-family: "Source Serif 4", serif;
+    font-weight: 800;
+    background-image: linear-gradient(180deg, white 50%, #ffe26c 50%);
+    width: fit-content;
+    height: max-content;
+}
+
+.ingredient{
+    height: max-content;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 30px;
+}
+
+.ingredient .content-in {
+    margin-top: 30px;
+    padding-left: 30px;
+    background-color: #FCFCFC; 
+    overflow: hidden;
+    font-size:1.6rem;
+    line-height: 1.6em; 
+    background: repeating-linear-gradient(to bottom,transparent 0 calc(1.6em - 1px), #d9d9d9 0 1.6em)
+     0 0/100% calc(100% - 1em);
+    padding-bottom: 50px;
+    
+}
+.ingredient .content-in label{
+    font-size: 1.6rem;
+    line-height: 20px;
+    font-weight: 500;
+    margin-left:10px;
+}
+.ingredient .content-in input{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.ingredient .content-in input:before{
+    color: black;
+    background-color: black;
+}
+.instruction .content-in{
+    margin-top: 30px;
+    background-color: #FCFCFC; 
+    overflow: hidden;
+    font-size:15px;
+    line-height: 2em; 
+    background: repeating-linear-gradient(to bottom,transparent 0 calc(2em - 1px), #d9d9d9 0 2em)
+     0 0/100% calc(100% - 1em);
+    padding-bottom: 50px;
+}
+.instruction .content-in .in{
+    font-size: 1.7rem;
+    color: #343434;
+    padding-bottom: 30px;
+}
+.button {
+    display: flex;
+    padding-left: 30px;
+}
+.button button{
+    box-sizing : content-box;
+    margin-top: 30px;
+    margin-right: 8px;
+    width: auto;
+    height: max-content;
+    font-size: 2.1rem;
+    padding: 6px 10px;
+    color: white;
+    background-color: #343434;
+    text-align: center;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button button:hover{
+    background-color: #f99c1d;
+}
+
+.note-container{
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 30px;
+}
+.note-container .note-box input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 70px;
+    background-color: #E0E0E0;
+    color: black;
+    font-style: italic;
+    font-size: 2rem;
+    padding-left: 30px;
+}
+.note-container .note-btn{
+    float: right;
+    border: none;
+    margin-top: 10px;
+    background-color: #343434;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+.alert_no{
+    margin-left: 70px;
+    margin-top: 20px;
+    margin-right: 70px;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    background-color: #FE5F61 ;
+    color: #343434;
+    border-radius: 5px;
+    padding: 10px 16px;
+}
+.alert_yes{
+    font-size: 3rem;
+    margin-bottom: 5px;
+    background-color: #63e149 ;
+    color: #343434;
+    margin-left: 70px;
+    margin-top: 20px;
+    margin-right: 70px;
+    border-radius: 5px;
+    padding: 10px 16px;
+}
+.saved-note{
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 30px;
+}
+.saved-note ul{
+    padding-left: 10px;
+}
+.saved-note li{
+    font-size: 1.5rem;
+    color: #343434;
+    margin-bottom: 3px;
+    padding-top: 5px;
+}

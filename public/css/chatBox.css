@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+.chatbox-wrapper {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+}
+.chatbox-toggle{
+    display: flex;
+    background: #FEF6F0;
+	color: #A54F00;
+    justify-content: center;
+	align-items: center;
+    font-size: 1rem;
+	cursor: pointer;
+	transition: .2s;
+    font-family: "Maven Pro", sans-serif;
+    width: max-content;
+    height: 40px;
+    padding: 2px 16px;
+}
+.chatbox-toggle i {
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+
+
+.chatbox-toggle:active {
+	transform: scale(.9);
+}
+.chatbox-message-wrapper {
+	position: absolute;
+	bottom: calc(100% + 1rem);
+	right: 0;
+	width: 420px;
+	overflow: hidden;
+	box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, .1);
+	transform: scale(0);
+	transform-origin: bottom right;
+	transition: .2s;
+}
+.chatbox-message-wrapper.show {
+	transform: scale(1);
+}
+.chatbox-message-header {
+    height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background:#A54F00;
+    color: white;
+	padding: 10px 16px;
+}
+.chatbox-message-profile {
+	display: flex;
+	align-items: center;
+	grid-gap: .5rem;
+}
+.chatbox-message-image {
+	width: 3rem;
+	height: 3rem;
+	object-fit: cover;
+	border-radius: 50%;
+}
+.chatbox-message-name {
+	font-size: 1.6rem;
+	font-weight: 500;
+    font-family: "Maven Pro", sans-serif;
+}
+
+.chatbox-message-content {
+	background: #FFDCBC;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	grid-row-gap: 1rem;
+	height: 300px;
+	overflow-y: auto;
+    font-family: "Maven Pro", sans-serif;
+}
+.chatbox-message-item {
+	width: 90%;
+	padding: 1rem;
+}
+.chatbox-message-item.sent {
+	align-self: flex-end;
+	background: white;
+	color: #343434;
+	border-radius: .75rem 0 .75rem .75rem;
+    font-family: "Maven Pro", sans-serif;
+}
+.chatbox-message-item.received {
+	background: white;
+	border-radius: 0 .75rem .75rem .75rem;
+	box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, .05);
+}
+.chatbox-message-item-time {
+	float: right;
+	font-size: .75rem;
+	margin-top: .5rem;
+	display: inline-block;
+}
+.chatbox-message-bottom {
+	background: white;
+	padding: .75rem 1.5rem;
+}
+.chatbox-message-form {
+	display: flex;
+	align-items: center;
+	background: var(--grey);
+	border-radius: .5rem;
+	padding: .5rem 1.25rem;
+}
+.chatbox-message-input {
+	background: transparent;
+    color: #343434;
+    font-size: 1rem;
+	outline: none;
+	border: none;
+	resize: none;
+	scrollbar-width: none;
+}
+.chatbox-message-input::-webkit-scrollbar {
+	display: none;
+}
+.chatbox-message-submit {
+	font-size: 1.25rem;
+    color: #A54F00;
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+    margin-left: 200px;
+}
+.chatbox-message-no-message {
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: center;
+}
+.chatbox-message-item-text{
+	font-size: 1.4rem;
+}

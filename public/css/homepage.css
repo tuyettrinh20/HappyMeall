@@ -1,0 +1,367 @@
+
+* {box-sizing: border-box}
+footer{
+  margin-top: auto;
+}
+
+body{
+  align-items: center;
+  justify-content: center;
+}
+
+.banner{
+  margin-bottom: 30px;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.mySlides {display: none}
+
+.slideshow-container img {
+    max-height: 540px;
+    filter: brightness(0.6);
+    object-fit: cover;
+}
+.text1 {
+    color: white;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: left;
+    padding-left: 70px;
+    font-family: "Maven Pro", sans-serif;
+    
+  }  
+  .text2 {
+    color: white;
+    font-size: 5.5rem;
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    text-align: left;
+    padding-left: 70px;
+    font-family: "Source Serif 4", serif;
+    font-weight: 800;
+  }  
+  .text3 {
+    color: white;
+    max-width: 415px;
+    font-size: 2.1rem;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: left;
+    padding-left: 70px;
+    font-family: "Maven Pro", sans-serif;
+  }  
+  .readmore_btn{
+    font-size: 2.1rem;
+    position: absolute;
+    top: 70%;
+    padding-left: 70px;
+    text-align: center;
+    font-family: "Maven Pro", sans-serif;
+  }
+  .readmore_btn a {
+    text-decoration: none;
+    color: white;
+    background-color: #97cc3b;
+    padding: 10px 50px;
+    border-radius: 10px;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #ffe26c;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  .recent-title{
+    display: flex;
+    padding-left: 60px;
+  }
+  .recent-title img{
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
+    margin-right: 10px;
+  }
+  .recent-title .title-text{
+    margin-bottom: 10px;
+    display: flex;
+    gap: 810px;
+  }
+  .recent-title .title-text .title h2{
+    font-size: 3.2rem;
+    font-weight: 800;
+    font-family: "Source Serif 4", serif;
+    color: #343434;
+  }
+  .recent-title .title-text .title p{
+    font-size: 1.5rem;
+    color: #343434;
+  }
+  .recent-title .title-text .see-more{
+    padding-top: 15px;
+  }
+  .recent-title .title-text .see-more p{
+    font-size: 1.7rem;
+    color: #f99c1d;
+  }
+  .recent-title1{
+    display: flex;
+    padding-left: 60px;
+  }
+  .recent-title1 img{
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
+    margin-right: 10px;
+  }
+  .recent-title1 .title-text1{
+    margin-bottom: 10px;
+    display: flex;
+    gap: 700px;
+  }
+  .recent-title1 .title-text1 .title1 h2{
+    font-size: 3.2rem;
+    font-weight: 800;
+    font-family: "Source Serif 4", serif;
+    color: #343434;
+  }
+  .recent-title1 .title-text1 .title1 p{
+    font-size: 1.5rem;
+    color: #343434;
+  }
+  .recent-title1 .title-text1 .see-more1{
+    padding-top: 15px;
+  }
+  .recent-title1 .title-text1 .see-more1 p{
+    font-size: 1.7rem;
+    color: #f99c1d;
+  }
+  
+  .recent{
+    display: flex;
+    overflow: hidden;
+    width: 1280px;
+   }
+  
+  .recent .slide{
+    list-style: none;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+  }
+  .recent .slide img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .recent .slide a{
+    text-decoration: none;
+  }
+  .recent .slide h2{
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: "Source Serif 4", serif;
+    color: #343434;
+  }
+  .recent .slide h2:hover{
+    color: #f99c1d;
+    cursor: pointer;
+  }
+  .recent .slide p{
+    font-size: 1.5rem;
+    color: #343434;
+  }
+  .recent-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .recent-wrap i{
+    color: #343434;
+    background-color: white;
+    border: solid 0.7px #343434;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .recent-wrap i:first-child{
+    left: 20px;
+  }
+  .recent-wrap i:last-child{
+    right: 35px;
+  }
+
+  .recent1{
+    display: flex;
+    overflow: hidden;
+    width: 1280px;
+   }
+  
+  .recent1 .slide1{
+    list-style: none;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+  }
+  .recent1 .slide1 img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .recent1 .slide1 a{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: "Source Serif 4", serif;
+    color: #343434;
+  }
+  .recent1 .slide1 a:hover{
+    color: #f99c1d;
+    cursor: pointer;
+  }
+  .recent1 .slide1 p{
+    font-size: 1.5rem;
+    color: #343434;
+  }
+  .recent-wrap1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .recent-wrap1 i{
+    color: #343434;
+    background-color: white;
+    border: solid 0.7px #343434;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .recent-wrap1 i:first-child{
+    left: 20px;
+  }
+  .recent-wrap1 i:last-child{
+    right: 35px;
+  }
+
+  .workshop{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    background-color: #FFEE54;
+  }
+  .workshop .name-workshop{
+    width: 400px;
+    padding-left: 120px;
+    padding-top: 60px;
+  }
+  .workshop .name-workshop h2 {
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: "Source Serif 4", serif;
+    color: #343434;
+  }
+  .workshop .name-workshop p {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    color: #343434;
+    margin-bottom: 40px;
+  }
+  
+  .workshop .name-workshop .date{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #343434;
+    background-color: white;
+    border-radius: 15px;
+    padding: 7px 16px;
+  }
+  .workshop .name-workshop .chef{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #343434;
+    background-color: #97CC3B;
+    border-radius: 15px;
+    padding: 7px 16px;
+  }
+  .workshop .name-workshop .hastag{
+    font-size: 1rem;
+    width: max-content;
+    font-weight: 600;
+    color: #343434;
+    background-color: white;
+    border-radius: 15px;
+    padding: 7px 16px;
+    margin-top: 10px;
+  }
+  
+  .workshop .infor-workshop{
+    margin-left: 520px;
+    position: absolute;
+    margin-top: 80px;
+    width: 230px;
+    height: 280px;
+    background-color: white;
+    border-radius: 7px;
+  }
+  .workshop .infor-workshop .detail-infor{
+    width: 190px;
+    height: 240px;
+    margin: 20px 20px;
+    border: dashed 2px #97CC3B;
+    border-radius: 7px;
+  }
+  .workshop .first-container{
+    display: flex;
+    position: relative;
+  }
+  .workshop img{
+    position: absolute;
+    height: 450px;
+    width: 40%;
+    right: 0;
+  }

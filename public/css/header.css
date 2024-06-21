@@ -1,0 +1,211 @@
+:root{
+    --primary-color: #f24137;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #e5e5e5;
+    --orange: #f99c1d;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 100%;
+    font-family: Roboto;
+}
+/* header */
+#header{
+    background: white;
+}
+
+
+
+
+
+.header__bottom {
+ padding: 12px 0;
+ align-items: center;
+    display: flex;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    position: relative;
+}
+
+.header__logo {
+    padding-left: 40px;
+}
+
+.header__heading {
+
+}
+
+.header__logo-link {
+
+}
+
+.header__logo-img {
+   height: 90px;
+   width: 90px;
+}
+
+.space{
+  width: 425px; 
+  height: 40px;
+  background-color: white;
+}
+.header__search{
+    float: right;
+    border-bottom: 2px solid black;
+    width: 300px;
+}
+
+
+.header__search .header__search-input {
+    margin-bottom: 10px;
+    outline: none;
+    height: 2rem;
+    border: none;   
+    width: 250px;
+    font-size: 1.4rem;
+}
+
+.header__search-input::placeholder {
+    color: #333;
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+
+.header__search-btn {
+    margin-bottom: 10px;
+    width: 10%;
+    height: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    font-size: 1.4rem;
+    background: white;
+    cursor: pointer;
+}
+
+.header__search-icon {
+    font-size: 1.7rem;
+    color: #333;
+}
+
+
+
+
+.header__cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__cart-icon-wrap {
+    position: relative;
+}
+
+.header__notice{
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -70%;
+    right: -70%;
+    background: #fff;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    border-radius: 50%;
+    border: 2px solid #ef2317;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+.header__nav-cart-icon {
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+
+/*header navigation*/
+
+.header__nav {
+    height: 4.8rem;
+}
+
+.header__nav1 {
+    height: 4.8rem;
+    border: 1px solid gainsboro;
+}
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header__nav-list1 {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    float: right;
+    width: 250px;
+    height: 100%;
+}
+.header__nav-item {
+
+}
+.header__nav-link {
+    color: black;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 500;
+    display: block;
+    padding-left: 7rem;
+    transition: 0.2s;
+}
+.header__nav-link:hover {
+    text-decoration: none;
+    color: green;
+    opacity: 0.6;
+}
+.header__login{
+    color: black;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+    padding-right: 3rem;
+    transition: 0.2s;
+}
+.header__login:hover{
+    text-decoration: none;
+    color: orange;
+    opacity: 0.6;
+}
+.header__signup {
+    text-decoration: none;
+    top:50%;
+    background-color:orange;
+    color: #fff;
+    border:none; 
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius:5px; 
+    min-height:35px; 
+    min-width: 100px;
+    padding: 5px 16px;
+}
+.header__signup:hover {
+    background-color: #da9539;
+}
+

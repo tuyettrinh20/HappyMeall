@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Happy Meal</title>
+    <link rel="stylesheet" type="text/css" href="./css/homepage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <% if(isLogined === true ){ %>
+        <%- include('headerAfter') %>
+    <% } else{ %>  
+      <%- include('partials/header') %>
+    <% } %>
+    <div class="banner">
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="imgs/pho.jpeg" style="width:100%">
+          <div class="text1">Happy breakfast</div>
+          <div class="text2">Pho Ha Noi</div>
+          <div class="text3">Legends and myths mean that many histories in Vietnam are coloured a variety of shades</div>
+          <div class="readmore_btn"><a href="https://www.vickypham.com/blog/vietnamese-beef-noodle-soup-pho-bo">READ MORE</a></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="imgs/noodle1_banner.jpg" style="width:100%">
+          <div class="text1">Familiar food</div>
+          <div class="text2">Noodles</div>
+          <div class="text3">Cheap, familiar and delicious food for your family</div>
+          <div class="readmore_btn"><a href="https://vietnam.travel/things-to-do/noodles-of-vietnam">READ MORE</a></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="imgs/bread_banner.jpg" style="width:100%">
+          <div class="text1">Lazy day</div>
+          <div class="text2">Banh Mi</div>
+          <div class="text3">This is Vietnamese street food the locals love to eat</div>
+          <div class="readmore_btn"><a href="https://fullofplants.com/how-to-make-banh-mi-vietnamese-baguette/">READ MORE</a></div>
+        </div>
+    </div>
+        <br>
+        
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    </div>
+
+    <!-- lastest recipes -->
+      <div class="recent-title">
+        <img src="imgs/alarm.png">
+        <div class="title-text">
+          <div class="title">
+            <h2>Recently Update</h2>
+            <p>Get lastest recipes</p>
+          </div>
+          <div class="see-more">
+            <p>See more <i class="fa-solid fa-arrow-right"></i></p>
+          </div>         
+        </div>
+      </div>
+      <div class="recent-wrap">
+        <i class="fa-solid fa-arrow-left" id="left"></i>
+        <ul class="recent">
+          <% for (let i = 0; i < recent.length; i++) { %>
+          <li class="slide">
+            <span><a href="/recipe/<%=recent[i].id %>"><img src="<%=recent[i].img %>"></a></span>
+            <a href="/recipe/<%=recent[i].id %>"><h2><%=recent[i].name_food %></h2></a>
+            <p><%=recent[i].name %></p>
+          </li>
+          <% }%>
+        </ul>
+        <i class="fa-solid fa-arrow-right" id="right"></i>
+      </div>
+    
+
+    <!-- vegan recipes -->
+      <div class="recent-title1">
+        <img src="imgs/carrot.png">
+        <div class="title-text1">
+          <div class="title1">
+            <h2>Vegetarianism</h2>
+            <p>Find healthy, delicious weight-loss and diet recipes</p>
+          </div>
+          <div class="see-more1">
+            <p>See more <i class="fa-solid fa-arrow-right"></i></p>
+          </div>
+        </div>
+      </div>
+      <div class="recent-wrap1">
+        <i class="fa-solid fa-arrow-left" id="left1"></i>
+        <ul class="recent1">
+          <% for (let i = 0; i < vegan.length; i++) { %>
+          <li class="slide1">
+            <span><a href="/recipe/<%=vegan[i].id %>"><img src="<%=vegan[i].img %>"></a></span>
+            <h2><a href="/recipe/<%=vegan[i].id %>"><%=vegan[i].name_food %></h2></a>
+            <p>Vegetarian</p>
+          </li>
+          <% }%>
+        </ul>
+        <i class="fa-solid fa-arrow-right" id="right1"></i>
+      </div>
+    
+      <!-- workshop -->
+      <div class="workshop">
+        <div class="first-container">
+          <div class="name-workshop">
+            <h2>Apron Up Cooking Class</h2>
+            <p>You are amazed by the mesmerising authentic Vietnamese food which is not the same in your home country? Take a cooking class to learn the secrets and dazzle in delight your family and friends when you come back home!</p>
+            <div class="remark">
+              <span class="date">Everyday</span>
+              <span class="chef">Local chef</span>
+            </div>
+            <p class="hastag">#amazingcookingclass</p>  
+          </div>
+          <div class="infor-workshop">
+            <div class="detail-infor">
+  
+            </div>
+          </div>
+        </div>
+        
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/0e/58/19/hanoi-apron-up-cooking.jpg?w=2000&h=-1&s=1" alt="">
+      </div>
+    
+    
+    
+    <br>
+    <script src="js/homepage.js"></script>
+    <div class="chat"><%- include('chatBox') %></div>
+</body>
+<footer><%- include('partials/footer') %></footer>
+</html>
